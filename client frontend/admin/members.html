@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Members</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="d-flex">
+      <!-- sidebar -->
+      <div class="sidebar" id="sidebar">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Report Generation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Equipments</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- main content -->
+      <div class="content flex-grow-1">
+        <!-- nav bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+          <div class="container-fluid d-flex align-items-center">
+            <button
+              class="btn btn-primary hamburger"
+              type="button"
+              aria-label="Toggle sidebar"
+            >
+              ☰
+            </button>
+            <a class="navbar-brand branding ms-2" href="#">
+              <img src="../media/logo.png" class="slogo" alt="Logo" />
+              BukSU Fitness Gym Admin Panel
+            </a>
+            <div class="ms-auto">
+              <button type="button" class="btn btn-danger">Log out</button>
+            </div>
+          </div>
+        </nav>
+
+        <div class="contentbody">
+          <div class="container mt-4 welcome">
+            <img src="../media/members.webp" class="bigimage" alt="Welcome" />
+            <h1 class="headertxt">Manage Members</h1>
+            <p>
+              Add, edit, or archive members in this list. You can find archived
+              members in the “Signed Up” tab.
+            </p>
+          </div>
+
+          <ul class="nav navpill nav-pills">
+            <li class="nav-item">
+              <a class="nav-link pilled active" aria-current="page" href="#"
+                >Activated</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link inactivepill" href="#">Signed Up</a>
+            </li>
+            <li class="nav-item">
+              <div class="linee"></div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link circlebuttonsb" href="#"
+                ><i class="bi bi-plus-lg"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link circlebuttonsr" href="#"
+                ><i class="bi bi-archive"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Search for..."
+                  aria-label="Search for..."
+                  aria-describedby="button-addon2"
+                />
+                <button
+                  class="btn btn-secondary"
+                  type="button"
+                  id="button-addon2"
+                >
+                  Go
+                </button>
+              </div>
+            </li>
+          </ul>
+
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th><input type="checkbox" /></th>
+                <th>Name</th>
+                <th>ID</th>
+                <th>Signup Method</th>
+                <th>Options</th>
+              </tr>
+            </thead>
+            <tbody>
+              <th><input type="checkbox" /></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th>
+                <button type="button" class="btn btn-primary">
+                  Update Details
+                </button>
+                <button type="button" class="btn btn-danger">
+                  Archive Member
+                </button>
+              </th>
+              <!-- user data rows go here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const sidebar = document.getElementById("sidebar");
+      const content = document.querySelector(".content");
+
+      // ONLY toggle the sidebar when the hamburger is clicked
+      hamburger.addEventListener("click", () => {
+        sidebar.classList.toggle("show");
+        content.classList.toggle("sidebar-open");
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

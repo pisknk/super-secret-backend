@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BukSU Fitness Gym Admin Panel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="d-flex">
+      <!-- sidebar -->
+      <div class="sidebar" id="sidebar">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Report Generation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Equipments</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- main content -->
+      <div class="content flex-grow-1">
+        <!-- nav bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+          <div class="container-fluid d-flex align-items-center">
+            <button
+              class="btn btn-primary hamburger"
+              type="button"
+              aria-label="Toggle sidebar"
+            >
+              ☰
+            </button>
+            <a class="navbar-brand branding ms-2" href="#">
+              <img src="../media/logo.png" class="slogo" alt="Logo" />
+              BukSU Fitness Gym Admin Panel
+            </a>
+            <div class="ms-auto">
+              <button type="button" class="btn btn-danger">Log out</button>
+            </div>
+          </div>
+        </nav>
+
+        <div class="contentbody">
+          <div class="container mt-4 welcome">
+            <img src="../media/hello.webp" class="bigimage" alt="Welcome" />
+            <h1 class="headertxt">Good day, Admin!</h1>
+            <p>
+              Here are the common tools used to manage members and gym
+              information.
+            </p>
+          </div>
+
+          <!-- widgets -->
+          <div class="container mt-4">
+            <div class="row widgets justify-content-center">
+              <div class="col-md-4">
+                <div class="card mb-4 no-border" style="width: 18rem">
+                  <img
+                    src="../media/act.png"
+                    class="card-img-top act"
+                    alt="Activate Member"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title"><b>Activate a Member</b></h5>
+                    <p class="card-text">
+                      Activate a member's account if they brought their
+                      requirements.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card mb-4 no-border" style="width: 18rem">
+                  <img
+                    src="../media/all.png"
+                    class="card-img-top"
+                    alt="Manage Members"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title"><b>Manage Members</b></h5>
+                    <p class="card-text">
+                      Add, edit, or delete members from the gym database.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card mb-4 no-border" style="width: 18rem">
+                  <img
+                    src="../media/equip.png"
+                    class="card-img-top"
+                    alt="Equipments"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title"><b>Equipments</b></h5>
+                    <p class="card-text">
+                      Check equipment inventory.<br /><b>[BETA]</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-4">
+            <div class="row">
+              <div class="col">
+                <div class="card mb-3 no-border" style="max-width: 440px">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img
+                        src="../media/new.png"
+                        class="img-fluid rounded-start"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div
+                        class="card-body d-flex flex-column justify-content-between"
+                      >
+                        <h5 class="card-title"><b>Recent Signup</b></h5>
+                        <div class="mt-auto">
+                          <p class="card-text">$NamePlaceholder</p>
+                          <p class="card-text">
+                            <small class="text-body-secondary"
+                              >$IDPlaceholder</small
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card mb-3 no-border" style="max-width: 440px">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img
+                        src="../media/current.png"
+                        class="img-fluid rounded-start"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="col-md-8">
+                      <div
+                        class="card-body d-flex flex-column justify-content-between"
+                      >
+                        <h5 class="card-title"><b>Current Gym Users</b></h5>
+                        <div class="mt-auto">
+                          <p class="card-text">
+                            There are # members inside the gym right now.
+                          </p>
+                          <p class="card-text">
+                            <small class="text-body-secondary"
+                              >Updated # mins ago based on last login.</small
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const sidebar = document.getElementById("sidebar");
+      const content = document.querySelector(".content");
+
+      // ONLY toggle the sidebar when the hamburger is clicked
+      hamburger.addEventListener("click", () => {
+        sidebar.classList.toggle("show");
+        content.classList.toggle("sidebar-open");
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
